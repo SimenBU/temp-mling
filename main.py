@@ -5,7 +5,6 @@ def ReadSensor():
     return input.temperature()
 
 def on_forever():
-    Temp_Verdi
     Temp_Verdi = ReadSensor()
     serial.write_value(Temp, Temp_Verdi)
     basic.pause(1000)
