@@ -2,7 +2,7 @@ Temp = "Temperatur"
 Temp_Verdi = 0
 
 def ReadSensor():
-    return pins.analog_read_pin(AnalogPin.P1)
+    return input.temperature()
 
 def on_forever():
     Temp_Verdi = ReadSensor()
