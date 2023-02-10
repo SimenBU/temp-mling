@@ -1,13 +1,13 @@
 let Temp = "Temperatur"
 let Temp_Verdi = 0
 function ReadSensor(): number {
-    return pins.analogReadPin(AnalogPin.P1)
+    return input.temperature()
 }
 
 basic.forever(function on_forever() {
     let Temp_Verdi: number;
     Temp_Verdi
-    Temp_Verdi = ReadSensor() * 4
+    Temp_Verdi = ReadSensor()
     serial.writeValue(Temp, Temp_Verdi)
-    basic.pause(30000)
+    basic.pause(1000)
 })
