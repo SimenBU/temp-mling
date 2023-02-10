@@ -7,5 +7,5 @@ def ReadSensor():
 def on_forever():
     Temp_Verdi = ReadSensor()
     serial.write_value(Temp, Temp_Verdi)
-    basic.pause(1000)
+    basic.pause(60000)
 basic.forever(on_forever)
